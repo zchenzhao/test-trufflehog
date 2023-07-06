@@ -14,6 +14,6 @@ jobs:
       - uses: trufflesecurity/trufflehog@main
         with:
           path: ./
-          base: test-branch
-          head: main
+          base: ${{ github.event.repository.default_branch }}
+          head: HEAD
           extra_args: --debug

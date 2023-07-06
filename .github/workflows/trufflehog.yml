@@ -17,3 +17,4 @@ jobs:
           base: ${{ github.ref }}
           head: HEAD
           extra_args: --debug --only-verified
+      - run: echo $GITHUB_REF

@@ -14,6 +14,6 @@ jobs:
       - uses: trufflesecurity/trufflehog@main
         with:
           path: ./
-          base: HEAD~
-          head: ${{ github.ref_name }}
+          base: main
+          head: test-branch
           extra_args: --debug

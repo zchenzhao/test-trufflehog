@@ -15,5 +15,5 @@ jobs:
         with:
           path: ./
           base: HEAD~
-          head: test-branch
+          head: ${{ github.ref }}
           extra_args: --debug

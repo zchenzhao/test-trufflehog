@@ -14,6 +14,6 @@ jobs:
       - uses: trufflesecurity/trufflehog@main
         with:
           path: ./
-          base: main
-          head: test-branch
+          base: test-branch
+          head: main
           extra_args: --debug

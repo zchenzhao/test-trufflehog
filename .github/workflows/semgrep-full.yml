@@ -1,6 +1,11 @@
 ---
 name: Semgrep Full Scan
 
+permissions:
+  actions: read
+  contents: read
+  security-events: write
+
 on:
   workflow_dispatch: {}
   schedule:

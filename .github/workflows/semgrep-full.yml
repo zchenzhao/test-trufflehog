@@ -26,7 +26,7 @@ jobs:
             semgrep \
               --sarif --output report.sarif \
               --metrics=off \
-              --config="p/default"
+              --config="p/typescript"
         # step 3
         - name: save report as pipeline artifact
           uses: actions/upload-artifact@v3

@@ -18,7 +18,7 @@ jobs:
           fetch-depth: 0
       - name: differential scan
         run: |
-          semgrep scan \
+          pwd && semgrep scan \
             --error \
             --metrics=off \
             --baseline-commit ${{ github.event.repository.default_branch }} \

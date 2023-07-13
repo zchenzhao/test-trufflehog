@@ -1,4 +1,3 @@
----
 name: Semgrep Differential Scan
 on:
   push:

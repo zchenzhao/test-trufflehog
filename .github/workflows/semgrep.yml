@@ -1,4 +1,4 @@
-name: Semgrep Differential Scan
+name: Semgrep Scan
 on:
   push:
     branches:
@@ -7,17 +7,15 @@ on:
     types: [assigned, opened, synchronize, reopened]
 
 jobs:
-  semgrep-diff:
+  semgrep:
     runs-on: ubuntu-latest
     container:
       image: returntocorp/semgrep
     steps:
-      - name: clone application source code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - name: differential scan
-        run: |
+      - run: |
           semgrep scan \
             --error \
             --metrics=off \
